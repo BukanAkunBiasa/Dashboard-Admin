@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed; /* Membuat sidebar tetap di tempat saat scroll */
+    top: 0; /* Menempatkan sidebar di bagian atas */
+    left: 0; /* Menempatkan sidebar di bagian kiri */
+    width: 230px; /* Lebar sidebar */
+    height: 100vh; /* Tinggi sidebar agar mengikuti tinggi layar */
+    background-color: #ffffff;
+    padding: 20px;
+    color: #757575;
+    overflow-y: auto; /* Menambahkan scroll pada sidebar jika konten melebihi tinggi */
+    z-index: 10; /* Menjaga sidebar di atas konten */
+}
+
+.head {
+    margin-bottom: 60px; 
+    display: flex;
+    justify-content: center; 
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.main a {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara ikon dan teks */
+    color: #757575;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 8px;
+}
+
+.main a img {
+    width: 20px; /* Ukuran ikon */
+    height: 20px;
+    transition: filter 0.3s;
+}
+
+.main a .description {
+    flex: 1; /* Membuat teks mengikuti lebar yang tersedia */
+}
+
+.main a:hover {
+    background-color: #E87C01;
+    color: #ffffff;
+    transition: 0.7s;
+}
+
+.main a:hover img {
+    filter: brightness(0) invert(1); 
+}
+
+/* Content Styles */
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content {
+    flex: 4;
+    padding: 20px;
+    margin-left: 230px;
+}
+
+
+.account-settings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.account-settings h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+/* Profile styles */
+.account-settings .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.account-settings .profile .info .name {
+    font-weight: bold;
+    font-size: 18px;
+}
+.account-settings .profile .info .email {
+    color: #888;
+}
+
+/* Form Styles */
+.account-settings form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account-settings form .form-group {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+}
+
+.account-settings form .form-group:nth-child(2n) {
+    margin-right: 0;
+}
+
+.account-settings form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.account-settings form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.account-settings form .form-group input:focus {
+    outline: none;
+    border-color: #f4c542;
+}
+
+.account-settings form .form-group .btn {
+    background-color: #E87C01;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.account-settings form .form-group .btn:hover {
+    background-color: #f4c542;
+    transition: .5s;
+}

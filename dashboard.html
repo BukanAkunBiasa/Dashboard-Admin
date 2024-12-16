@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="head">
+          <div class="logo">
+            <a href="#" title="#">
+              <img src="asset/logo.png" alt="Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="main">
+          <a href="dashboard.html" title="Dashboard">
+            <img src="asset/icon 1.png" alt="" />
+            <div class="description">Dashboard</div>
+          </a>
+          <a href="artikel.html">
+            <img src="asset/icon 5.png" alt="" />
+            <div class="description">Artikel</div>
+          </a>
+          <a href="pengguna.html">
+            <img src="asset/icon 2.png" alt="" />
+            <div class="description">Pengguna</div>
+          </a>
+          <a href="pengaturan.html">
+            <img src="asset/icon 3.png" alt="" />
+            <div class="description">Pengaturan</div>
+          </a>
+          <a href="#logout">
+            <img src="asset/icon 4.png" alt="" />
+            <div class="description">Keluar</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="navbar">
+          <div class="welcome-text">
+            <p>Hello, Kang Admin</p>
+            <p>Welcome back!</p>
+          </div>
+          <div class="profile">
+            <img src="asset/profile.png" alt="Profile Image" />
+            <div class="profile-text">
+              <p>Kang Admin</p>
+              <span>Admin</span>
+              <span class="dropdown-icon">▾</span>
+            </div>
+          </div>
+        </div>
+        <h2>Dashboard Overview</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Total Artikel</h3>
+            <p>10</p>
+          </div>
+          <div class="card">
+            <h3>Total Pengguna</h3>
+            <p id="totalPengguna">6</p>
+            <!-- Tempat untuk nilai dinamis -->
+          </div>
+          <div class="card">
+            <h3>Jumlah Kandang</h3>
+            <p id="jumlahKandang">23</p>
+            <!-- Tempat untuk nilai dinamis -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  </body>
+</html>

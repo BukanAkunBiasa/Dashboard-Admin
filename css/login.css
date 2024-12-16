@@ -1,0 +1,91 @@
+body {
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Tambahkan jarak antar bagian */
+}
+
+.login-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-section h1 {
+    color: #0a3d62;
+    font-size: 36px;
+    text-align: center; /* Agar teks judul lebih rapi di tengah */
+}
+
+.login-section label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #0a3d62;
+    font-size: 18px;
+}
+
+.login-section input[type="text"],
+.login-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #0a3d62;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-section a {
+    color: #e67e22;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-section button {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #0a3d62;
+    color: #fff;
+    transition: 0.6s;
+}
+
+.logo-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Memberi jarak antara logo 1 dan logo 2 */
+}
+
+.logo-section img:first-child {
+    width: 150px; 
+    height: 150px;
+}
+
+.logo-section img:last-child {
+    width: 300px; 
+    height: 100px;
+}

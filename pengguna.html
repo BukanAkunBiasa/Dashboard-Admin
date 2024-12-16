@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelola Pengguna</title>
+    <link rel="stylesheet" href="css/pengguna.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="container">
+      <div class="sidebar">
+        <div class="head">
+          <div class="logo">
+            <a href="logo" title="#">
+              <img src="asset/logo.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="main">
+          <a href="dashboard.html" title="d">
+            <img src="asset/icon 1.png" alt="" />
+            <div class="description">Dashboard</div>
+          </a>
+          <a href="artikel.html">
+            <img src="asset/icon 5.png" alt="" />
+            <div class="description">Artikel</div>
+          </a>
+          <a href="pengguna.html">
+            <img src="asset/icon 2.png" alt="" />
+            <div class="description">Pengguna</div>
+          </a>
+          <a href="pengaturan.html">
+            <img src="asset/icon 3.png" alt="" />
+            <div class="description">Pengaturan</div>
+          </a>
+          <a href="#logout">
+            <img src="asset/icon 4.png" alt="" />
+            <div class="description">Keluar</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Overlay untuk latar belakang -->
+      <div class="overlay"></div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="navbar">
+          <div class="welcome-text">
+            <p>Hello, Kang</p>
+            <p>Have a nice day</p>
+          </div>
+          <div class="profile">
+            <img src="asset/profile.png" alt="" />
+            <div class="profile-text">
+              <p>Kang Admin</p>
+              <span>Admin</span>
+              <span class="dropdown-icon">▾</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-user-form" style="display: none">
+          <h3>Tambah Pengguna Baru</h3>
+          <form id="addUserForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required />
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="jumlah_kandang">Jumlah Kandang:</label>
+            <input type="number" id="jumlah_kandang" name="jumlah_kandang" required />
+
+            <label for="no_telp">No. Telp:</label>
+            <input type="text" id="no_telp" name="no_telp" required />
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required />
+
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required />
+
+            <button type="submit">Tambah Pengguna</button>
+            <button type="button" id="closeFormBtn">Batal</button>
+          </form>
+        </div>
+
+        <!-- Tabel Daftar Pengguna -->
+        <table id="userTable"></table>
+
+        <div class="content">
+          <!-- Form untuk Edit Pengguna -->
+          <div id="editUserForm" class="modal">
+            <div class="modal-content">
+              <h2>Edit Pengguna</h2>
+              <label for="editNama">Nama:</label>
+              <input type="text" id="editNama" name="editNama" />
+              <label for="editAlamat">Alamat:</label>
+              <input type="text" id="editAlamat" name="editAlamat" />
+              <label for="editEmail">Email:</label>
+              <input type="email" id="editEmail" name="editEmail" />
+              <label for="editJumlahKandang">Jumlah Kandang:</label>
+              <input type="number" id="editJumlahKandang" name="editJumlahKandang" />
+              <label for="editNoTelp">No Telp:</label>
+              <input type="tel" id="editNoTelp" name="editNoTelp" />
+              <button id="saveEditBtn">Simpan</button>
+              <button id="cancelEditBtn">Batal</button>
+            </div>
+          </div>
+
+          <!-- Form untuk Delete Pengguna -->
+          <div id="deleteUserForm" class="modal">
+            <div class="modal-content">
+              <h2>Hapus Pengguna</h2>
+              <p>Apakah Anda yakin ingin menghapus pengguna ini?</p>
+              <div class="button-container">
+                <button id="confirmDeleteBtn">Hapus</button>
+                <button id="cancelDeleteBtn">Batal</button>
+              </div>
+            </div>
+          </div>
+
+          <h2>Kelola Pengguna</h2>
+          <div class="search-bar">
+            <input type="text" placeholder="Cari" />
+            <button id="addUserBtn"><i class="fas fa-plus"></i> Tambah</button>
+          </div>
+          <div class="table-container">
+            <table id="userTable">
+              <thead>
+                <tr>
+                  <th>nama</th>
+                  <th>id_user</th>
+                  <th>alamat</th>
+                  <th>jumlah_kandang</th>
+                  <th>email</th>
+                  <th>no_telp</th>
+                  <th>password</th>
+                  <th>status</th>
+                  <th>action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
